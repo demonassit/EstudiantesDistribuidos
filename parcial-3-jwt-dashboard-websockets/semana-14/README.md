@@ -12,5 +12,7 @@
 
 **Entregable:** documentación de API REST + WebSocket funcionando en producción.
 
+**Archivo base:** `base/documentacion-api.md` (secciones vacías, llénalas tú).
+
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.
