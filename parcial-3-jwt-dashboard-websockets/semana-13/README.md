@@ -12,5 +12,7 @@
 
 **Entregable:** WebSocket funcionando de punta a punta (backend emite, frontend recibe y actualiza UI) + reporte de Práctica 5.
 
+**Archivos base:** `base/backend-websocket/websocket.server.js` (andamiaje), `base/frontend-websocket/pages/notificaciones.js` (componente vacío), `base/reporte-practica5.md` (plantilla). Integrar **después** del JWT de Web (misma semana, mismo backend).
+
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.
