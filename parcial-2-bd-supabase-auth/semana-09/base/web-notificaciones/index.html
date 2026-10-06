@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Notificaciones CECyT9 (demo local)</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+  #estado { font-weight: bold; }
+  #estado.conectado { color: green; }
+  #estado.desconectado { color: crimson; }
+  ul { list-style: none; padding: 0; }
+  li { background: #fff3cd; border: 1px solid #ffe69c; padding: .5rem .75rem; margin-bottom: .5rem; border-radius: .25rem; }
+  time { color: #666; font-size: .85em; display: block; }
+</style>
+</head>
+<body>
+  <h1>Notificaciones en vivo — CECyT9 (demo local)</h1>
+  <p>Estado: <span id="estado" class="desconectado">desconectado</span></p>
+  <p>Corre <code>node servidor.js</code> y en su terminal escribe <code>lleno Python</code> para ver un aviso aparecer aquí, en vivo.</p>
+  <ul id="lista"></ul>
+
+  <script>
+    const estado = document.getElementById('estado');
+    const lista = document.getElementById('lista');
+
+    // TODO: crear el WebSocket con `new WebSocket(...)` apuntando a este mismo host
+    // TODO: en 'open', actualizar `estado` a "conectado"
+    // TODO: en 'close', actualizar `estado` a "desconectado"
+    // TODO: en 'message', parsear el JSON recibido ({ tipo, mensaje, fecha })
+    //       y agregar un <li> a `lista` mostrando la hora y el mensaje
+  </script>
+</body>
+</html>

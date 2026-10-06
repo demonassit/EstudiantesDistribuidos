@@ -12,7 +12,5 @@
 
 **Entregable:** script cliente + reporte de Práctica 1 (evidencia de ejecución, capturas).
 
-**Archivo base:** `base/cliente.js` (andamiaje inicial, complétalo tú).
-
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.

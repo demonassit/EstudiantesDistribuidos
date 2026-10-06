@@ -1,0 +1,8 @@
+{
+  "name": "semana-09-web-notificaciones",
+  "version": "1.0.0",
+  "description": "Página web local que muestra en vivo el broadcast de 'cupo lleno' vía WebSocket",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

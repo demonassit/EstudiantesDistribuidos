@@ -12,7 +12,5 @@
 
 **Entregable (CORTE 2, compartido):** servidor concurrente con broadcast + reporte de Práctica 4.
 
-**Archivos base:** `base/servidor-sockets.js` (parte de tu solución de la semana 9 + función `broadcast()` vacía por completar), `base/cliente-prueba.js` (igual que la semana 9).
-
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.

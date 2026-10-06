@@ -12,7 +12,5 @@
 
 **Entregable:** script que invoca el servicio SOAP + XML de petición/respuesta anotado, explicando por qué la industria migró hacia REST/WebSocket.
 
-**Archivo base:** `base/consumir-soap.js` (andamiaje, complétalo tú). Servicio SOAP público sugerido: `https://www.dataaccess.com/webservicesserver/NumberConversion.wso` (operación `NumberToWords`).
-
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.

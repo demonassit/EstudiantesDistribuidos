@@ -1,0 +1,8 @@
+{
+  "name": "semana-08-websocket-basico",
+  "version": "1.0.0",
+  "description": "Ejemplo básico de WebSocket con broadcast (Distribuidos, semana 8)",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

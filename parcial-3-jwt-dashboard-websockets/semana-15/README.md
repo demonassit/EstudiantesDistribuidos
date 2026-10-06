@@ -12,7 +12,5 @@
 
 **Entregable (CORTE 3, compartido):** backend distribuido final (API REST + WebSocket) con ajustes aplicados + bitácora de cambios post-pruebas.
 
-**Archivo base:** `base/bitacora-cambios.md` (secciones vacías, llénalas con lo que reporte Pruebas).
-
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.

@@ -12,7 +12,5 @@
 
 **Entregable:** mini-programa RPC funcionando (cliente+servidor) + comparación con sockets crudos.
 
-**Archivos base:** `base/servidor-rpc.js`, `base/cliente-rpc.js` (andamiaje, complétalos tú).
-
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.

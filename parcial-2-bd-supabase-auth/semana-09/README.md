@@ -12,7 +12,5 @@
 
 **Entregable:** servidor de sockets concurrente funcionando + script cliente de prueba (mínimo 2 clientes simultáneos).
 
-**Archivos base:** `base/servidor-sockets.js`, `base/cliente-prueba.js` (andamiaje, complétalos tú). Ejecuta el servidor y luego 2+ instancias del cliente en terminales separadas.
-
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.
