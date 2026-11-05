@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería · Menú</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Cafetería CECyT 9 · Administrar menú</h1>
+    <span id="canal" class="canal">Tiempo real: conectando…</span>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <h2>Agregar producto</h2>
+      <form id="form-nuevo" class="fila-form">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ej. Quesadilla" autocomplete="off">
+        </div>
+        <div>
+          <label for="precio">Precio ($)</label>
+          <input type="number" id="precio" min="1" max="1000" step="1" placeholder="25">
+        </div>
+        <button type="submit">Agregar</button>
+      </form>
+      <p id="error-form" class="mensaje-error"></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Productos</h2>
+      <table class="tabla">
+        <thead>
+          <tr><th>#</th><th>Nombre</th><th>Precio</th><th>Disponible</th><th></th></tr>
+        </thead>
+        <tbody id="tabla-productos"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/comun.js"></script>
+  <script src="js/productos.js"></script>
+</body>
+</html>

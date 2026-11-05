@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería · Cocina</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Cafetería CECyT 9 · Cocina</h1>
+    <a href="productos.html" target="_blank">Administrar menú</a>
+    <span id="canal" class="canal">Tiempo real: conectando…</span>
+  </header>
+
+  <main>
+    <div class="tablero">
+      <section class="columna">
+        <h2>Recibidos <span id="n-recibido">0</span></h2>
+        <div id="col-recibido"></div>
+      </section>
+      <section class="columna">
+        <h2>Preparando <span id="n-preparando">0</span></h2>
+        <div id="col-preparando"></div>
+      </section>
+      <section class="columna">
+        <h2>Listos para entregar <span id="n-listo">0</span></h2>
+        <div id="col-listo"></div>
+      </section>
+    </div>
+
+    <section class="tarjeta" style="margin-top:16px">
+      <h2>Historial</h2>
+      <ul id="historial" class="historial"></ul>
+    </section>
+  </main>
+
+  <script src="js/comun.js"></script>
+  <script src="js/cocina.js"></script>
+</body>
+</html>

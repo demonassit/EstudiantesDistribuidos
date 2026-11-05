@@ -12,5 +12,7 @@
 
 **Entregable:** script que invoca el servicio SOAP + XML de petición/respuesta anotado, explicando por qué la industria migró hacia REST/WebSocket.
 
+**Ejercicio complementario (laboratorio):** [Cafetería en tiempo real — sesión 1](../ejercicio-websocket-cafeteria/GUIA-SESION-1.md): CRUD de productos con MySQL y difusión del menú en vivo por WebSocket.
+
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.

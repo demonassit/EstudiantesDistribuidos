@@ -12,5 +12,7 @@
 
 **Entregable:** WebSocket funcionando de punta a punta (backend emite, frontend recibe y actualiza UI) + reporte de Práctica 5.
 
+**Ejercicio complementario (laboratorio, antes de integrar al proyecto):** [Cafetería en tiempo real — sesión 2](../ejercicio-websocket-cafeteria/GUIA-SESION-2.md): pedidos en tiempo real (aviso al grupo cocina y dirigido al dueño con clave), reconexión con puesta al día y pruebas automáticas.
+
 ---
 La rúbrica de esta práctica la tiene tu docente por separado.

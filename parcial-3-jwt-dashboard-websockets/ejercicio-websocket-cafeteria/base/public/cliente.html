@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería · Mi pedido</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Cafetería CECyT 9 · Mi pedido</h1>
+    <span id="canal" class="canal">Tiempo real: conectando…</span>
+  </header>
+
+  <main>
+    <section id="formulario" class="tarjeta">
+      <h2>Haz tu pedido</h2>
+      <form id="form-pedido">
+        <label for="alumno">¿Quién eres?</label>
+        <select id="alumno"></select>
+        <ul id="menu" class="menu"></ul>
+        <p class="total">Total: $<span id="total">0</span></p>
+        <button type="submit">Pedir</button>
+        <p id="error-form" class="mensaje-error"></p>
+      </form>
+    </section>
+
+    <section id="seguimiento" class="tarjeta oculto">
+      <p>Tu pedido</p>
+      <p id="codigo" class="codigo"></p>
+      <p id="detalle"></p>
+
+      <ol id="pasos" class="pasos">
+        <li data-estado="recibido">Recibido</li>
+        <li data-estado="preparando">Preparando</li>
+        <li data-estado="listo">Listo</li>
+        <li data-estado="entregado">Entregado</li>
+      </ol>
+
+      <div id="aviso-listo" class="aviso-listo oculto">¡Tu pedido está listo! Pasa a recogerlo a la barra.</div>
+      <div id="aviso-cancelado" class="aviso-cancelado oculto">La cocina canceló tu pedido.</div>
+
+      <div class="contadores">
+        <span>Mensajes recibidos por WebSocket: <strong id="cont-ws">0</strong></span>
+      </div>
+      <p><button id="otro" class="secundario" type="button">Hacer otro pedido</button></p>
+    </section>
+
+    <section class="tarjeta zona-pruebas">
+      <h2>Zona de pruebas</h2>
+      <p>Simula que se cae el WiFi del plantel: el servidor cierra de golpe todas las conexiones WebSocket.</p>
+      <button id="cortar" class="peligro" type="button">Simular corte de red</button>
+    </section>
+  </main>
+
+  <script src="js/comun.js"></script>
+  <script src="js/cliente.js"></script>
+</body>
+</html>

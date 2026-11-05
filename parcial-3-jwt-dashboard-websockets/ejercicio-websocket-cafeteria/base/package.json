@@ -1,0 +1,18 @@
+{
+  "name": "cafeteria-tiempo-real",
+  "version": "2.0.0",
+  "description": "Ejercicio aislado de Distribuidos: CRUD con MySQL + API REST + WebSocket para la cafetería",
+  "main": "server.js",
+  "scripts": {
+    "bd": "node bd/crear-bd.js",
+    "start": "node server.js",
+    "probar:s1": "node pruebas/probar.js 1",
+    "probar": "node pruebas/probar.js 2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5",
+    "ws": "^8.18.0"
+  }
+}

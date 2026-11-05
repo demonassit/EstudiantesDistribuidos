@@ -1,0 +1,163 @@
+:root {
+  --fondo: #f6f4ef;
+  --tarjeta: #ffffff;
+  --texto: #1f2328;
+  --suave: #5f6670;
+  --borde: #ddd8cc;
+  --guinda: #6d1a36;
+  --guinda-claro: #f3e4ea;
+  --verde: #1f7a4d;
+  --verde-claro: #e2f3ea;
+  --ambar: #a15c00;
+  --ambar-claro: #fdf0dc;
+  --rojo: #b42318;
+  --rojo-claro: #fde8e6;
+  --radio: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.45;
+}
+
+header {
+  background: var(--guinda);
+  color: #fff;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+header h1 { margin: 0; font-size: 1.25rem; }
+header a { color: #fff; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 40px; }
+
+.tarjeta {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.oculto { display: none !important; }
+
+label { display: block; font-weight: 600; margin-bottom: 6px; }
+
+input[type='text'],
+input[type='number'],
+select {
+  width: 100%;
+  max-width: 360px;
+  padding: 8px 10px;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  background: var(--guinda);
+  color: #fff;
+}
+button:hover { filter: brightness(1.1); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.secundario { background: #e9e5db; color: var(--texto); }
+button.peligro { background: var(--rojo-claro); color: var(--rojo); }
+
+.menu { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 8px; max-width: 420px; }
+.menu label { display: flex; justify-content: space-between; font-weight: 400; gap: 10px;
+  border: 1px solid var(--borde); border-radius: 6px; padding: 8px 10px; cursor: pointer; }
+.menu input { margin-right: 8px; }
+
+.menu label.agotado { color: var(--suave); background: #efebe3; cursor: not-allowed; text-decoration: line-through; }
+
+.fila-form { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+.fila-form > div { flex: 1 1 180px; }
+.fila-form input { max-width: none; }
+
+.tabla { width: 100%; border-collapse: collapse; }
+.tabla th, .tabla td { text-align: left; padding: 6px; border-bottom: 1px solid var(--borde); }
+.tabla input[type='text'], .tabla input[type='number'] { max-width: none; padding: 6px 8px; }
+.tabla input[type='number'] { width: 90px; }
+.acciones-tabla { white-space: nowrap; }
+.acciones-tabla button { padding: 6px 10px; font-size: 0.85rem; }
+
+.total { font-weight: 700; margin: 8px 0 12px; }
+
+.mensaje-error { color: var(--rojo); font-weight: 600; min-height: 1.4em; }
+
+/* Indicador del canal de tiempo real */
+.canal { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.15); padding: 4px 10px; border-radius: 999px; }
+.canal::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: #c9c3b6; }
+.canal.conectado::before { background: #3ddc84; }
+.canal.desconectado::before { background: #ff6b5e; }
+
+/* Seguimiento del alumno */
+.codigo { font-size: 2.4rem; font-weight: 800; color: var(--guinda); margin: 0; }
+.pasos { list-style: none; padding: 0; margin: 18px 0; display: grid;
+  grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.pasos li { text-align: center; padding: 10px 4px; border-radius: 6px; background: #ece8df;
+  color: var(--suave); font-size: 0.9rem; font-weight: 600; }
+.pasos li.hecho { background: var(--verde-claro); color: var(--verde); }
+.pasos li.actual { background: var(--guinda); color: #fff; }
+
+.aviso-listo { background: var(--verde); color: #fff; padding: 16px; border-radius: var(--radio);
+  font-size: 1.2rem; font-weight: 700; text-align: center; animation: latido 1s ease-in-out 3; }
+.aviso-cancelado { background: var(--rojo-claro); color: var(--rojo); padding: 12px;
+  border-radius: var(--radio); font-weight: 700; text-align: center; }
+@keyframes latido { 50% { transform: scale(1.03); } }
+
+.contadores { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.95rem; color: var(--suave); }
+.contadores strong { color: var(--texto); font-size: 1.1rem; }
+
+.zona-pruebas { border-style: dashed; }
+.zona-pruebas h2 { font-size: 1rem; margin-top: 0; }
+
+/* Tablero de cocina */
+.tablero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.columna { background: #ebe7dd; border-radius: var(--radio); padding: 10px; min-height: 200px; }
+.columna h2 { font-size: 1rem; margin: 4px 4px 10px; display: flex; justify-content: space-between; }
+.pedido { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 8px;
+  padding: 10px; margin-bottom: 10px; }
+.pedido.nuevo { animation: resaltar 2s ease-out; }
+@keyframes resaltar { from { background: #fff4b8; } to { background: var(--tarjeta); } }
+.pedido h3 { margin: 0 0 4px; font-size: 1.05rem; display: flex; justify-content: space-between; }
+.pedido p { margin: 2px 0; font-size: 0.9rem; color: var(--suave); }
+.pedido .acciones { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.pedido .acciones button { padding: 6px 10px; font-size: 0.85rem; }
+
+.historial { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
+.historial li { padding: 4px 0; border-bottom: 1px solid var(--borde); }
+
+.etiqueta { font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
+.etiqueta.entregado { background: var(--verde-claro); color: var(--verde); }
+.etiqueta.cancelado { background: var(--rojo-claro); color: var(--rojo); }
+
+.aviso-flotante { position: fixed; right: 16px; bottom: 16px; max-width: 340px;
+  background: var(--rojo); color: #fff; padding: 12px 14px; border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); }
+
+.inicio { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.inicio a { display: block; text-decoration: none; color: inherit; }
+.inicio a:hover .tarjeta { border-color: var(--guinda); }
+
+@media (max-width: 760px) {
+  .tabla th:first-child, .tabla td:first-child { display: none; }
+  .tablero { grid-template-columns: 1fr; }
+  .pasos { grid-template-columns: repeat(2, 1fr); }
+}
